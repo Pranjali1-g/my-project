@@ -1,0 +1,32 @@
+🔹 Key Sections in index.html:
+<link rel="stylesheet"> – Links the external CSS file.
+
+<div class="card"> – Main container (white box).
+
+<div class="balance"> – Displays balance (e.g., $0).
+
+<button class="btn deposit"> – Green "Deposit" button.
+
+<button class="btn withdraw"> – Red "Withdraw" button.
+
+🔹 Key Sections in styles.css:
+body – Centers the card using Flexbox and sets background.
+
+.card – Adds padding, white background, rounded corners, shadow.
+
+.balance – Styles balance text (large, green).
+
+.btn – Common button styles (size, color, hover effect).
+
+.deposit / .withdraw – Specific button colors and hover states.
+
+🔹 Steps to Build UI:
+Create index.html for structure.
+
+Create styles.css for design.
+
+Link CSS in the HTML file.
+
+Style each section (card, balance, buttons).
+
+Use Flexbox to center the card on screen.
