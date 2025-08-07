@@ -1,0 +1,19 @@
+HTML Semantic Structure
+1. Used tags like <header>, <nav>, <main>, and <footer> to structure the page meaningfully.
+
+CSS Grid Layout
+1. Created a grid layout using display: grid with:
+(grid-template-columns: 280px auto;
+grid-template-rows: 100px auto 50px;)
+2. Organized the dashboard into 3 sections: header, content (nav + main), and footer.
+3. Used grid-column: 1 / span 2; to make header and footer stretch across both columns.
+
+Component Styling
+1.Gave each section a distinct background color and border:
+2.Green for header and footer.
+3.Grey for navigation.
+4.Light grey for main content.
+
+Responsive Height
+1.Used height: 100vh to make the layout fill the entire screen.
+2.Ensures consistent look across devices with different screen sizes.
