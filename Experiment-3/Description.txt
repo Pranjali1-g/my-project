@@ -1,5 +1,12 @@
-HTML Semantic Structure
-1. Used tags like <header>, <nav>, <main>, and <footer> to structure the page meaningfully.
+Admin Dashboard – Description
+
+HTML Structure
+1. <input type="checkbox" id="theme-toggle">: Hidden checkbox to toggle Dark Mode.
+2. <div class="dashboard">: Main grid layout container.
+3. <header>: Contains dashboard title and Dark Mode label.
+4. <nav>: Sidebar with navigation links (Home, Users, Settings).
+5. <main>: Displays welcome message and placeholder content.
+6. <footer>: Footer section with © 2025 Admin Panel.
 
 CSS Grid Layout
 1. Created a grid layout using display: grid with:
@@ -17,3 +24,28 @@ Component Styling
 Responsive Height
 1.Used height: 100vh to make the layout fill the entire screen.
 2.Ensures consistent look across devices with different screen sizes.
+
+CSS Variables (Light Mode Default)
+--bg-header: green;
+--bg-nav: grey;
+--bg-main: white;
+--bg-footer: green;
+--text-color: white;
+
+Dark Mode Styling
+Triggered by #theme-toggle:checked
+--bg-header: rgb(130,127,127);
+--bg-nav: rgb(65,64,64);
+--bg-main: rgb(220,215,215);
+--bg-footer: rgb(130,127,127);
+
+ Styling Highlights
+1. Header: Flex layout, spans both columns, styled with --bg-header.
+2. Nav: Sidebar background using --bg-nav.
+3. Main: Main content area with --bg-main.
+4. Footer: Center-aligned text, spans both columns, --bg-footer. 
+
+Learning Outcomes
+•	Created a responsive dashboard using HTML + CSS Grid.
+•	Implemented Dark Mode toggle using CSS variables.
+•	Learned to separate structure (HTML) and styling (CSS) effectively.
