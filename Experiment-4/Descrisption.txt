@@ -1,0 +1,36 @@
+Counter App – Description
+
+HTML Structure
+1. <div class="counter-container"> – Parent container to hold the counter.
+2. <button id="decrement">-</button> – Button to decrease the counter value.
+3. <span id="counter">0</span> – Span element to display the current counter value (default = 0).
+4. <button id="increment">+</button> – Button to increase the counter value.
+
+CSS Layout & Styling
+
+Counter Container
+1. border: 2px solid black; padding: 20px; border-radius: 10px; → Creates a bordered box for the counter.
+2. display: flex; align-items: center; gap: 20px; → Arranges counter and buttons in a row with spacing.
+
+Counter Display (#counter)
+1. Larger font-size (2rem) for visibility.
+2. Bold styling (font-weight: bold).
+
+Buttons
+1. Styled with padding and border-radius for a clean look.
+2. Hover effect (cursor: pointer;) for interactivity.
+
+JavaScript Functionality
+1. Selected counter display (#counter), increment (#increment), and decrement (#decrement) buttons.
+
+2. Added event listeners:
+Increment button: increases counter value by 1.
+Decrement button: decreases counter value by 1.
+
+3. Updates the <span> in real-time whenever buttons are clicked.
+
+Learning Outcomes
+1. Learned how to center elements perfectly using Flexbox.
+2. Understood how to wrap content in a bordered container for emphasis.
+3. Practiced event handling in JavaScript for interactive counters.
+4. Strengthened concepts of separating structure (HTML), styling (CSS), and logic (JS).
