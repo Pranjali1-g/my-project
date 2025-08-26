@@ -1,43 +1,46 @@
-const svg = document.getElementById("drawingArea");
-let drawing = false;
-let currentPath = null;
+window.addEventListener('DOMContentLoaded', function () {
+    var canvas = document.getElementById('drawArea');
+    var ctx = canvas.getContext('2d');
 
-// Mouse down → start freehand path
-svg.addEventListener("mousedown", (e) => {
-  drawing = true;
+    var isDrawing = false;
+    var lastX = 0;
+    var lastY = 0;
 
-  const startX = e.offsetX;
-  const startY = e.offsetY;
+    ctx.strokeStyle = '#0b6ebf';
+    ctx.lineWidth = 2;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
 
-  currentPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-  currentPath.setAttribute("d", `M ${startX} ${startY}`);
-  currentPath.setAttribute("stroke", "blue");
-  currentPath.setAttribute("stroke-width", "2");
-  currentPath.setAttribute("fill", "none");
+    function getPos(evt) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+            x: evt.clientX - rect.left,
+            y: evt.clientY - rect.top
+        };
+    }
 
-  svg.appendChild(currentPath);
-});
+    canvas.addEventListener('mousedown', function (evt) {
+        isDrawing = true;
+        var p = getPos(evt);
+        lastX = p.x;
+        lastY = p.y;
+    });
 
-// Mouse move → extend path
-svg.addEventListener("mousemove", (e) => {
-  if (drawing && currentPath) {
-    const x = e.offsetX;
-    const y = e.offsetY;
+    canvas.addEventListener('mousemove', function (evt) {
+        if (!isDrawing) return;
+        var p = getPos(evt);
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(p.x, p.y);
+        ctx.stroke();
+        lastX = p.x;
+        lastY = p.y;
+    });
 
-    let d = currentPath.getAttribute("d");
-    d += ` L ${x} ${y}`;
-    currentPath.setAttribute("d", d);
-  }
-});
+    function stop() {
+        isDrawing = false;
+    }
 
-// Mouse up → stop drawing
-svg.addEventListener("mouseup", () => {
-  drawing = false;
-  currentPath = null;
-});
-
-// Prevent drawing outside SVG
-svg.addEventListener("mouseleave", () => {
-  drawing = false;
-  currentPath = null;
+    canvas.addEventListener('mouseup', stop);
+    canvas.addEventListener('mouseleave', stop);
 });

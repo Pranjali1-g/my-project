@@ -1,48 +1,54 @@
-# Experiment 6 – Interactive SVG Drawing Tool with Mouse Event Handlers
+# Experiment 6 – Interactive Canvas Drawing Tool with Mouse Event Handlers
 
 ## 🎯 Objective
-To design and build a web-based drawing tool using **SVG** where users can draw freehand paths interactively with the mouse. The experiment strengthens concepts of JavaScript DOM manipulation, SVG element creation, and mouse event handling.
+To design and build a web-based drawing tool using the **HTML `<canvas>` element** where users can draw freehand interactively with the mouse.  
+This experiment strengthens concepts of the **Canvas API**, **JavaScript DOM manipulation**, and **event handling**.
 
 ---
 
 ## 🛠️ Key Components
 
 ### HTML
-- `<svg id="drawingArea">` – Drawing canvas where shapes are created.
+- `<canvas id="drawingArea">` – Canvas area where freehand strokes are made.
 - `<h2>` – Title heading.
 
 ### CSS
 - **Centered layout** with margin and text alignment.
-- **SVG area styled** with border, background, and crosshair cursor.
+- **Canvas area styled** with border, background, and crosshair cursor.
 
 ### JavaScript
 - **Events used:**
-  - `mousedown` → Start drawing.
-  - `mousemove` → Extend the current path.
-  - `mouseup` / `mouseleave` → Stop drawing.
-- **SVG element creation:** `document.createElementNS("http://www.w3.org/2000/svg", "path")`
-- **Path update:** Coordinates appended dynamically with `"L x y"`.
+  - `mousedown` → Start drawing and move to cursor position.
+  - `mousemove` → Draw continuous lines following the cursor.
+  - `mouseup` → Stop drawing.
+  - `mouseleave` → Stop drawing when cursor leaves canvas.
+- **Canvas API methods:**
+  - `beginPath()` – Start new drawing path.
+  - `moveTo(x, y)` – Move pointer to starting position.
+  - `lineTo(x, y)` – Draw line to given coordinates.
+  - `stroke()` – Render the line.
 
 ---
 
 ## 🔄 Interactive Flow
-1. **Click inside SVG** → New path starts from click point.  
-2. **Drag mouse** → Path extends following cursor.  
+1. **Click inside Canvas** → Drawing starts from mouse position.  
+2. **Drag mouse** → Line follows cursor creating freehand stroke.  
 3. **Release mouse** → Drawing stops.  
-4. **Repeat action** → Multiple paths can be drawn.  
+4. **Repeat** → Multiple strokes can be drawn.  
 
 ---
 
 ## ✅ Valid & Invalid Cases
-- **Valid:** Drawing inside the SVG → Paths created properly.  
-- **Invalid:** Drawing outside SVG → Prevented using `mouseleave` event.  
+- **Valid:** Drawing inside the Canvas → Blue strokes appear properly.  
+- **Invalid:** Cursor leaves Canvas → Drawing stops automatically due to `mouseleave` event.  
 
 ---
 
 ## 📚 Learning Outcomes
-- Learned **how to handle mouse events (mousedown, mousemove, mouseup, mouseleave)**.  
-- Practiced **real-time DOM updates** by creating and modifying SVG elements dynamically.  
-- Understood the use of **`createElementNS`** for SVG element creation.  
-- Designed a simple **freehand drawing tool** without reloading the page.  
+- Learned handling of **mouse events** (`mousedown`, `mousemove`, `mouseup`, `mouseleave`).  
+- Practiced **Canvas API functions** (`beginPath`, `moveTo`, `lineTo`, `stroke`).  
+- Understood difference between **pixel-based drawing (Canvas)** and **shape-based drawing (SVG)**.  
+- Built a working **freehand drawing tool** in a browser.  
 
 ---
+
