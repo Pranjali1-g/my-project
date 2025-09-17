@@ -98,6 +98,10 @@ npm install
 npm run dev
 ```
 
+## Live Demo
+[Click here to view the project](https://23bad10001-experiment08.bytexl.live/)
+
+
 ## Learning Objectives
 - Practice multiple pieces of React state
 - Understand controlled inputs and form submission logic
