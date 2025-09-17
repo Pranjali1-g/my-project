@@ -91,6 +91,9 @@ npm install
 npm run dev    # Start dev server (Vite + HMR)
                # Open the shown localhost URL
 ```
+## Live Demo
+[Click here to view the project](https://23bad10001-experiment-07.bytexl.live/)
+
 
 ## Learning Objectives
 - Understand React’s component + prop model  
