@@ -21,40 +21,15 @@ A simple, interactive **Command-Line Employee Management System** built with Nod
 **Note:**  
 All data is stored in memory using JavaScript arrays. When you exit, all records are cleared.
 
-## Example Session
-Your Name: Pranjali Gupta
-UID: 23BAD10001
+## Output
+# Employee Management
 
-Employee Management System
-1. Add Employee
-2. List Employees
-3. Remove Employee
-4. Exit
-Choose an option: 1
-Enter employee name: Priyanshu Mishra
-Enter employee ID: 10004
-Employee added!
+### Add and List Employee
+![AddandListEmployee](./images/AddandListEmployee.png)
 
-Employee Management System
-1. Add Employee
-2. List Employees
-3. Remove Employee
-4. Exit
-Choose an option: 1
-Enter employee name: Anmol Saini
-Enter employee ID: 10015
-Employee added!
+### Remove and Exit Employee
+![RemoveandExitEmployee](./images/RemoveandExit.png)
 
-Employee Management System
-1. Add Employee
-2. List Employees
-3. Remove Employee
-4. Exit
-Choose an option: 2
-
-List of employees:
-1. Name: Priyanshu Mishra, ID: 10004
-2. Name: Anmol Saini, ID: 10015
 
 ## Learning Outcomes
 
