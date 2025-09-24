@@ -11,7 +11,7 @@ const handler2 =function(req, res)  {
 };
 const server = http.createServer(handler2);
 
-const port = 3000;
+const port = 3000; 
 server.listen(port, () => {
  console.log(`Server running at http://localhost:${port}/`);
 });  
