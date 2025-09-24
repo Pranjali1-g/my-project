@@ -48,12 +48,7 @@ A lock expires automatically after a configurable timeout (default: **60 seconds
    - If lock expired → frees the seat and asks to lock again.  
    - If still locked → cancels the timer and permanently books the seat.  
 
-7. **`POST /release/:id` Function**  
-   - Uses mutex again.  
-   - If seat is locked → clears the timer and makes it available again.  
-   - If seat wasn’t locked → shows error.  
-
-8. **app.listen Function**  
+7. **app.listen Function**  
    - Starts the server on port 3000.  
    - Prints a message so you know the booking system is running.  
 
