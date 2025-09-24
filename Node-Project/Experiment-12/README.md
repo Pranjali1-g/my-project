@@ -51,12 +51,7 @@ A lock expires automatically after a configurable timeout (default: **60 seconds
 7. **app.listen Function**  
    - Starts the server on port 3000.  
    - Prints a message so you know the booking system is running.  
-
-In simple words:  
-- The **functions** in the code are like different helpers.  
-- Some check seat status, some lock/unlock seats, and some confirm bookings.  
-- The **mutex** ensures no two people mess with the same seat at the same exact moment.  
-
+  
 
 ## Installation
 
