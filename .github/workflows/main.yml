@@ -8,6 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: experiment-25   # 👈 change this to your real folder name if different
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,4 +31,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: react-build
-          path: build
+          path: experiment-25/build
