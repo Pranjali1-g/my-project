@@ -10,7 +10,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: experiment-25   
+        working-directory: CloudDeployment-Project/experiment-25   
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
