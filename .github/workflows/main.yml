@@ -10,7 +10,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: experiment-25   # 👈 change this to your real folder name if different
+        working-directory: experiment-26   # 👈 change this to your real folder name if different
 
     steps:
       - name: Checkout repository
