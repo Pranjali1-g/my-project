@@ -10,8 +10,7 @@ jobs:
 
     defaults:
       run:
-        working-directory: experiment-26   # 👈 change this to your real folder name if different
-
+        working-directory: experiment-26   
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -31,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: react-build
-          path: experiment-25/build
+          path: experiment-26/build
